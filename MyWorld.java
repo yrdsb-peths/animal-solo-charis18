@@ -7,14 +7,14 @@ public class MyWorld extends World
         super(600, 400, 1, false); 
         Elephant elephant = new Elephant();
         addObject(elephant, 300, 200);
-
-        public void createApple();
-        {
-            Apple apple = new Apple();
-            int x = Greenfoot.getRandomNumber(600);
-            int y = 0;
-            addObject(apple, x, y);
-        }
-        
+        createApple();
+    }
+    
+    public void createApple();
+    {
+        Apple apple = new Apple();
+        int x = Greenfoot.getRandomNumber(600);
+        int y = 0;
+        addObject(apple, x, y);
     }
 }
