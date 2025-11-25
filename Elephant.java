@@ -1,7 +1,9 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;
+import greenfoot.GreenfootSound;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class Elephant extends Actor
 {
+    private GreenfootSound elephantSound = new GreenfootSound("elephantcub.mp3");
     public void act()
     {
         if (Greenfoot.isKeyDown("left"))
@@ -25,6 +27,9 @@ public class Elephant extends Actor
             MyWorld world = (MyWorld) getWorld();
             removeTouching((Apple.class));
             world.createApple();
+            elephantSound.play();
         }    
     }
+
+
 }

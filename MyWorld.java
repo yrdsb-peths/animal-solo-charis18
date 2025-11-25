@@ -14,6 +14,7 @@ public class MyWorld extends World
 
         scoreLabel = new Label(score, 50);
         addObject(scoreLabel, 50, 50);
+        setBackground("background.jpg");
     }
 
     public void createApple()
