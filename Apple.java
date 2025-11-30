@@ -2,9 +2,11 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class Apple extends Actor
 {
+    int speed = 1;
+    
     public void act()
     {
-       setLocation(getX(), getY() + 1);
+       setLocation(getX(), getY() + speed);
        
        MyWorld world = (MyWorld)getWorld(); 
        if (getY() >= world.getHeight()) 
@@ -12,6 +14,11 @@ public class Apple extends Actor
            world.gameOver(); 
            world.removeObject(this); 
        }
+    }
+    
+    public void setSpeed(int spd)
+    {
+        speed = spd;
     }
 
 }
