@@ -28,15 +28,17 @@ public class Elephant extends Actor
         if (Greenfoot.isKeyDown("left"))
         {
             move(-5);
+            facing = "left";
         }
         
         if (Greenfoot.isKeyDown("Right"))
         {
             move(5);
+            facing = "right";
         }
 
+        animateElephant();
         eat();
-        
     }
 
     public void eat()
@@ -45,6 +47,7 @@ public class Elephant extends Actor
         {
             MyWorld world = (MyWorld) getWorld();
             removeTouching((Apple.class));
+            world.increaseScore();
             world.createApple();
             elephantSound.play();
         }    
